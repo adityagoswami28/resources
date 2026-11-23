@@ -12,3 +12,7 @@ Nothing is here yet.
 | `pipelines/` | Sets of skills that work together, with a map of the order. |
 | `prompt-guidelines/` | Guides for writing prompts. |
 | `app-lists/` | Lists of apps worth using. |
+
+## License
+
+MIT. Use, change and share anything here, as long as the license note stays with it. See [LICENSE](LICENSE).
