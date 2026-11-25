@@ -3,7 +3,7 @@ name: download zips
 on:
   push:
     branches: [main]
-    paths: ["skills/**", "tools/make-zips.py"]
+    paths: ["skills/**", "guides/**", "tools/make-zips.py"]
   workflow_dispatch:
 permissions:
   contents: write

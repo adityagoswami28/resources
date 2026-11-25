@@ -1,6 +1,6 @@
 """Make one download zip per resource folder.
 
-    python3 tools/make-zips.py          -> writes downloads/<name>.zip for every folder in skills/
+    python3 tools/make-zips.py          -> writes downloads/<name>.zip for every folder in skills/ and guides/
     python3 tools/make-zips.py --check  -> changes nothing, says if a zip is out of date
 
 The zip holds the folder itself (unzip it and you get <name>/ ready to use).
@@ -10,7 +10,7 @@ GitHub runs this on every push (.github/workflows/zips.yml).
 import io, os, sys, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KINDS = ["skills"]                       # add "pipelines", "prompt-guidelines", ... when they hold folders
+KINDS = ["skills", "guides"]               # add "pipelines", "app-lists", ... when they hold folders
 SKIP = ("__pycache__", ".DS_Store", ".git")
 
 

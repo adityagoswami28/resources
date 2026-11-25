@@ -8,6 +8,12 @@ Free resources from Aditya Goswami for people who build with AI.
 |---|---|---|
 | [Pop-up Explainer](skills/popup-explainer/) | Turns any topic into a short narrated video that looks like a paper pop-up book. Works with any AI agent. | [popup-explainer.zip](https://github.com/adityagoswami28/resources/raw/main/downloads/popup-explainer.zip) |
 
+## Guides
+
+| Guide | What it does | Download |
+|---|---|---|
+| [My AI's rulebook](guides/my-ais-rulebook/) | Ten plain rules your AI reads before every job, in one short file any AI can read. | [my-ais-rulebook.zip](https://github.com/adityagoswami28/resources/raw/main/downloads/my-ais-rulebook.zip) |
+
 Unzip it and you get one folder, ready to give to your AI agent. Each skill's own README says how to set it up, shows an example and how to make it yours.
 
 ## What will be here
@@ -16,6 +22,7 @@ Unzip it and you get one folder, ready to give to your AI agent. Each skill's ow
 |---|---|
 | `skills/` | Skills you can add to your AI agent. One folder per skill. |
 | `pipelines/` | Sets of skills that work together, with a map of the order. |
+| `guides/` | Rules and guides your AI can read. One folder per guide. |
 | `prompt-guidelines/` | Guides for writing prompts. |
 | `app-lists/` | Lists of apps worth using. |
 | `downloads/` | One zip per resource, always the newest version. Made by `tools/make-zips.py` (GitHub runs it on every change). |
