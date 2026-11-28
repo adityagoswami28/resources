@@ -6,6 +6,7 @@ Free resources from Aditya Goswami for people who build with AI.
 
 | Skill | What it does | Download |
 |---|---|---|
+| [Illustration](skills/illustration/) | Draws hand-drawn pictures in one notebook look: 30 kinds of picture, sized for a blog, Instagram, X, LinkedIn and a newsletter. Works with any AI agent that can run Python. | [illustration.zip](https://github.com/adityagoswami28/resources/raw/main/downloads/illustration.zip) |
 | [Pop-up Explainer](skills/popup-explainer/) | Turns any topic into a short narrated video that looks like a paper pop-up book. Works with any AI agent. | [popup-explainer.zip](https://github.com/adityagoswami28/resources/raw/main/downloads/popup-explainer.zip) |
 
 ## Guides

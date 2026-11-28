@@ -1,0 +1,101 @@
+/* Sketchbook pictures: the paper, ink and pens.
+   The default colors live here; brand.json can swap them (scripts/brand.py adds the swap after this file). Light page first, dark page below. --u scales every line with the picture size. */
+@font-face{font-family:'Young Serif';src:url('FONTDIR/YoungSerif-Regular.ttf')}
+@font-face{font-family:'Gochi Hand';src:url('FONTDIR/GochiHand-Regular.ttf')}
+@font-face{font-family:'Atkinson Hyperlegible';font-weight:400;src:url('FONTDIR/AtkinsonHyperlegible-Regular.ttf')}
+@font-face{font-family:'Atkinson Hyperlegible';font-weight:700;src:url('FONTDIR/AtkinsonHyperlegible-Bold.ttf')}
+body{
+  --paper:#FAF6EC; --grid:#EBE8E2; --ink:#141414; --edge:#141414; --draw:#141414; --text:#161B21; --muted:#303945; --pencil:#38404A;
+  --head:#1D3557; --forest:#1D3557; --sage:#F5DECB; --sage-deep:#D5C5BA; --tang:#2B67B8; --tang-ink:#2B67B8; --hl:#FFE27A;
+  --scrap:#FDFBF7; --card:#F8ECDF; --doodle:#DFCDBF; --lift:rgba(29,53,87,.17);
+  --tape:rgba(219,202,189,.85); --tape2:rgba(255,226,122,.85);
+  --wa:#E8D4C4; --wb:#FEE89C; --wc:#ABC0D8; --blend:multiply; --logo:#1D3557;
+}
+body.dark{
+  --paper:#121820; --grid:#1B2027; --ink:#FAF0E8; --edge:#6D6764; --draw:#E3CEBD; --text:#FAEDE2; --muted:#CCBAAC; --pencil:#DAC6B6;
+  --head:#F9EBE0; --sage:#2D3035; --sage-deep:#524F50; --tang-ink:#608DCA;
+  --scrap:#1B2027; --card:#20242A; --doodle:#2D3035; --lift:rgba(0,0,0,.5);
+  --tape:rgba(132,123,118,.72); --tape2:rgba(255,226,122,.6);
+  --wa:rgba(120,113,109,.5); --wb:rgba(255,226,122,.22); --wc:rgba(43,103,184,.3); --blend:normal; --logo:#F9EBE0;
+}
+body.sage{--paper:#F5DECB;--grid:#EAD6C5;--card:#FAEEE5;--wa:#DBCABD;--doodle:#D5C5BA}
+*{box-sizing:border-box}
+html,body{margin:0;overflow:hidden}
+body{width:var(--W);height:var(--H);position:relative;color:var(--text);-webkit-font-smoothing:antialiased;
+  font-family:'Atkinson Hyperlegible',system-ui,sans-serif;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) calc(1.4px*var(--u)),transparent calc(1.4px*var(--u))),linear-gradient(90deg,var(--grid) calc(1.4px*var(--u)),transparent calc(1.4px*var(--u)));
+  background-size:calc(36px*var(--u)) calc(36px*var(--u))}
+svg{overflow:visible}
+
+/* ---------- pens ---------- */
+.d,.dp,.dt,.dtk,.dd,.di,.pc-line{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.di{stroke:var(--draw);stroke-width:calc(3.3px*var(--u))}        /* small icons and logos: the black pen, a little finer */
+.d{stroke:var(--draw);stroke-width:calc(4.2px*var(--u))}        /* black pen */
+.dp{stroke:var(--pencil);stroke-width:calc(3.4px*var(--u))}     /* pencil */
+.dt{stroke:var(--tang-ink);stroke-width:calc(4.6px*var(--u))}   /* orange pen: the ONE thing to notice */
+.dtk{stroke:var(--tang-ink);stroke-width:calc(5.6px*var(--u))}  /* ticks and crosses */
+.dd{stroke:var(--doodle);stroke-width:calc(3px*var(--u))}       /* faint margin doodles */
+.thin{stroke-width:calc(2px*var(--u));opacity:.55}
+.dash{stroke-dasharray:calc(11px*var(--u)) calc(13px*var(--u))}
+.wash{stroke:none;mix-blend-mode:var(--blend)}
+.wa{fill:var(--wa)} .wb{fill:var(--wb)} .wc{fill:var(--wc)}
+.dotf{fill:var(--draw)} .dott{fill:var(--tang-ink)} .dote{fill:none;stroke:var(--pencil);stroke-width:calc(3px*var(--u))}
+.lift{fill:var(--lift)}
+.pp{stroke:var(--edge);stroke-width:calc(2.6px*var(--u))}
+.pp.scrap{fill:var(--scrap)} .pp.card{fill:var(--card)} .pp.sticky{fill:var(--hl);stroke:none} .pp.sagep{fill:var(--sage)}
+.tape{fill:var(--tape)} .tape2{fill:var(--tape2)}
+/* the pencil is an object, not page ink: it stays the same pencil on the night page. Same colors, same black outline.
+   Only the COLOR of its tip turns light grey there (same shape, nothing added). */
+.pc-wood{fill:#FFFFFF} .pc-body{fill:#2B67B8} .pc-band{fill:#D5C5BA} .pc-end{fill:#1D3557}
+.pc-line{stroke:#141414;stroke-width:1.6}
+.pc-tip{fill:#141414}
+body.dark .pc-tip{fill:#E3CEBD}      /* only the tip's color changes: same shape, nothing added */
+.pc-line.thin{stroke-width:.9;opacity:.45}
+
+/* ---------- words inside drawings ---------- */
+.t{width:100%;height:100%;display:flex;line-height:1.1;overflow:visible}
+.t span{display:block;max-width:100%;text-wrap:balance}
+.t svg.ic{flex:none;overflow:visible}
+.t.onhl svg.ic .di{stroke:#141414} .t.onhl svg.ic .dotf{fill:#141414}   /* on a yellow sticky note the pen stays dark, also at night */
+.hand{font-family:'Gochi Hand','Comic Sans MS',cursive;color:var(--pencil);line-height:1.05}
+.hand.ink{color:var(--text)}
+.pen{color:var(--tang-ink)}
+.serif{font-family:'Young Serif',Georgia,serif;color:var(--head);line-height:1.1;letter-spacing:-.01em}
+.body{font-family:'Atkinson Hyperlegible',system-ui,sans-serif;color:var(--text);line-height:1.25}
+.body.muted{color:var(--muted)}
+.bold{font-weight:700}
+.serif.pen,.body.pen{color:var(--tang-ink)}
+.onhl{color:#141414}
+mark{background:var(--hl);color:#141414;padding:0 .14em;margin:0 -.04em;border-radius:.1em .3em .12em .34em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+s{text-decoration:line-through;text-decoration-color:var(--tang-ink);text-decoration-thickness:.1em}
+b.pen{font-weight:inherit}
+
+/* ---------- the page: logo, title block, picture, footer ---------- */
+/* the corner logo: your name or logo image, then your handle (scripts/brand.py makes it from brand.json) */
+.logo{position:absolute;z-index:5;line-height:1;white-space:nowrap;color:var(--logo);display:flex;align-items:center}
+.logo .handle{font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:700;font-size:.46em;margin-left:.55em;color:var(--logo);letter-spacing:.01em}
+.head{position:absolute;display:flex;flex-direction:column;justify-content:flex-start;overflow:visible}
+.wide .head{justify-content:center}
+.head .kick{font-family:'Gochi Hand',cursive;color:var(--pencil);line-height:1;transform:rotate(-1.2deg);transform-origin:0 50%;margin-bottom:.28em}
+.head h1{margin:0;font-family:'Young Serif',Georgia,serif;font-weight:400;color:var(--head);line-height:1.1;letter-spacing:-.012em;text-wrap:balance;padding-bottom:.08em}
+.head{isolation:isolate}
+.head h1 mark{border-radius:.08em .22em .1em .26em;position:relative;z-index:-1}   /* the line above keeps its g and p tails */
+.head .sub{margin:.42em 0 0;color:var(--muted);line-height:1.36;text-wrap:pretty;font-weight:400}
+.head .note{font-family:'Gochi Hand',cursive;color:var(--tang-ink);line-height:1.05;margin-top:.5em;transform:rotate(-1.6deg);transform-origin:0 50%;display:flex;align-items:center;gap:.35em}
+.head .note svg{flex:none}
+.art{position:absolute}
+.rule{position:absolute}
+.facts{position:absolute;display:flex;gap:calc(26px*var(--u))}
+.fact{flex:1;background:var(--card);border:calc(2.6px*var(--u)) solid var(--edge);box-shadow:calc(7px*var(--u)) calc(8px*var(--u)) 0 var(--lift);padding:calc(16px*var(--u)) calc(22px*var(--u));line-height:1.28;display:flex;flex-direction:column;justify-content:center}
+.fact:nth-child(odd){transform:rotate(-.8deg)} .fact:nth-child(even){transform:rotate(.7deg)}
+.fact b{display:block;font-family:'Gochi Hand',cursive;font-weight:400;color:var(--tang-ink);line-height:1;margin-bottom:.2em}
+.fact.hl{background:var(--hl);color:#141414;border-color:transparent}
+.fact.hl b{color:#141414}
+.next{position:absolute;font-family:'Gochi Hand',cursive;color:var(--pencil);line-height:1;display:flex;align-items:center;gap:.4em;white-space:nowrap}
+.next b{font-weight:400;color:var(--tang-ink)}
+.pager{position:absolute;font-family:'Gochi Hand',cursive;color:var(--pencil);line-height:1}
+.follow{position:absolute;display:flex;align-items:center;flex-wrap:wrap;font-weight:700;color:var(--text);line-height:1.2}
+.follow b{font-family:'Gochi Hand',cursive;font-weight:400;color:var(--tang-ink)}
+.follow span{white-space:nowrap}
+.deco{position:absolute;z-index:0}

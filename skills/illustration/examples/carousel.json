@@ -1,0 +1,33 @@
+{
+ "slug": "better-prompts",
+ "job": "save",
+ "slides": [
+  {"kicker": "Save this for your next prompt",
+   "title": "Write a prompt that works ==the first time==",
+   "sub": "4 small fixes. Each one takes a minute.",
+   "next": "say who it's for",
+   "hero": {"type": "anatomy", "thing": "a good prompt", "parts": ["who it's for", "the job", "an example", "what good looks like"], "pick": 4},
+   "alt": "Hand-drawn note labeled a good prompt, with four parts pointed out: who it's for, the job, an example, and what good looks like."},
+  {"kicker": "Fix 1",
+   "title": "Say ==who it's for==",
+   "next": "give it one job",
+   "hero": {"type": "fix", "before": "Write a post about sleep", "after": "Write for ==new parents== who sleep 5 hours", "note": "the reader changes every word"},
+   "alt": "A crossed-out prompt, write a post about sleep, and under it the better one: write for new parents who sleep 5 hours."},
+  {"kicker": "Fix 2",
+   "title": "One prompt, ==one job==",
+   "next": "show an example",
+   "hero": {"type": "compare", "left": {"title": "Do it all at once", "points": ["research, write, edit", "hard to tell what broke"], "good": false},
+            "right": {"title": "One job at a time", "points": ["research first", "then write", "then edit"], "good": true}},
+   "alt": "Two notes side by side: do it all at once, crossed out, and one job at a time, ticked."},
+  {"kicker": "Fix 3",
+   "title": "Show it ==one example==",
+   "next": "the check",
+   "hero": {"type": "prompt", "ask": "Write 3 subject lines like this one: Your plants miss you", "answer": ["Your bike misses you", "Your notebook misses you", "Your running shoes miss you"]},
+   "alt": "A prompt box asking for 3 subject lines like your plants miss you, and the 3 answers that follow the example."},
+  {"kicker": "Fix 4",
+   "title": "Say what ==good looks like==",
+   "sub": "Then ask it to check its own answer.",
+   "hero": {"type": "checklist", "title": "Good looks like", "items": [{"text": "Under 100 words", "ok": true}, {"text": "One clear next step", "ok": true}, {"text": "Plain words", "ok": true}, {"text": "Made-up numbers", "ok": false}]},
+   "alt": "A checklist titled good looks like: under 100 words, one clear next step, plain words ticked, made-up numbers crossed out."}
+ ]
+}

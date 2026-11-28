@@ -1,0 +1,12 @@
+{
+ "slug": "better-prompts-blog",
+ "job": "save",
+ "slides": [
+  {"title": "Write a prompt that works ==the first time==",
+   "hero": {"type": "steps", "steps": [{"title": "Say who it's for"}, {"title": "Give it one job"}, {"title": "Show one example"}, {"title": "Say what good looks like"}]},
+   "alt": "Four numbered steps: say who it's for, give it one job, show one example, say what good looks like."},
+  {"title": "The reader ==changes every word==",
+   "hero": {"type": "fix", "before": "Write a post about sleep", "after": "Write for ==new parents== who sleep 5 hours", "note": "say who it's for"},
+   "alt": "A crossed-out prompt, write a post about sleep, and under it the better one: write for new parents who sleep 5 hours."}
+ ]
+}

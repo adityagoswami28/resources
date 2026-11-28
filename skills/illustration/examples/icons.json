@@ -1,0 +1,19 @@
+{
+  "job": "save",
+  "slides": [
+    {"title": "One idea becomes ==five posts==", "sub": "Each channel gets its own version.", "alt": "One idea in the middle with arrows out to X, Instagram, LinkedIn, the blog and the newsletter, each with its hand-drawn logo.",
+     "hero": {"type": "hub", "center": "1 idea", "items": ["X thread", "Instagram carousel", "LinkedIn post", "blog post", "newsletter"]}},
+    {"title": "Seven steps, a ==check== after each", "sub": "Nothing moves on until it passes.", "alt": "Seven boxes in a row, each with a small icon and a tick: idea, research, write, channels, pictures, schedule, results.",
+     "hero": {"type": "pipeline", "icons": "auto", "steps": ["idea", "research", "write", "channels", "pictures", "schedule", "results"]}},
+    {"title": "The tools on my ==desk==", "alt": "Six paper notes, one per tool, each with its hand-drawn logo: Claude, Notion, GitHub, X, Instagram, LinkedIn.",
+     "hero": {"type": "stickies", "items": ["Claude", "Notion", "GitHub", "X", "Instagram", "LinkedIn"]}},
+    {"title": "What goes in, what ==comes out==", "alt": "Three things go into the content pipeline and three come out.",
+     "hero": {"type": "machine", "in": ["one idea", "my notes", "past lessons"], "box": "the content pipeline", "out": ["5 posts", "the pictures", "a schedule"]}},
+    {"title": "Three steps to a ==first skill==", "alt": "Three steps: write the brief, let AI draft, check it.",
+     "hero": {"type": "steps", "steps": [{"title": "Write the brief", "text": "who it is for, what it must do", "icon": "doc"}, {"title": "Let AI draft", "text": "one piece at a time", "icon": "spark"}, {"title": "Check it", "text": "against a short scorecard", "icon": "check"}]}},
+    {"title": "What each channel ==gets==", "alt": "A table: X gets a thread and an article, Instagram gets a carousel, LinkedIn gets a post, a carousel and an article.",
+     "hero": {"type": "table", "cols": ["X", "Instagram", "LinkedIn"], "rows": [{"label": "short post", "cells": [true, false, true]}, {"label": "carousel", "cells": [false, true, true]}, {"label": "long article", "cells": [true, false, true]}]}},
+    {"title": "The parts ==add up==", "alt": "11 skills plus 1 agent plus a check after each step equals a content pipeline.",
+     "hero": {"type": "equation", "parts": [{"label": "11 skills", "icon": "gear"}, {"label": "1 agent", "icon": "spark"}, {"label": "a check after each step", "icon": "check"}], "result": "a content pipeline"}}
+  ]
+}
